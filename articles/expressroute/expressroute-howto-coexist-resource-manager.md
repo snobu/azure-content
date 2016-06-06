@@ -33,6 +33,7 @@ Having the ability to configure Site-to-Site VPN and ExpressRoute has several ad
 
 ## Limits and limitations
 
+- **App Service VNET Integration is not supported:** You cannot Point-to-site VPN from a Web App to a VNET that's using both VPN and ExR type Gateways.
 - **Transit routing is not supported:** You cannot route (via Azure) between your local network connected via Site-to-Site VPN and your local network connected via ExpressRoute.
 - **Forced tunneling cannot be enabled on the Site-to-Site VPN gateway:** You can only "force" all Internet-bound traffic back to your on-premises network via ExpressRoute. 
 - **Only standard or high performance gateways:** You must use a standard or high performance gateway for both the ExpressRoute gateway and the Site-to-Site VPN gateway. See [Gateway SKUs](../vpn-gateway/vpn-gateway-about-vpngateways.md) for information about gateway SKUs.
