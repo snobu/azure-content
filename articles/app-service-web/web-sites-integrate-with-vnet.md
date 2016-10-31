@@ -178,7 +178,10 @@ If those certificates or network information is changed then you will need to cl
 
 ##Accessing on premise resources##
 
-One of the benefits of the VNET Integration feature is that if your VNET is connected to your on premise network with a Site to Site VPN then your apps can have access to your on premise resources from your app.  For this to work though you may need to update your on premise VPN gateway with the routes for your Point to Site IP range.  When the Site to Site VPN is first set up then the scripts used to configure it should set up routes including your Point to Site VPN.  If you add the Point to Site VPN after your create your Site to Site VPN then you will need to update the routes manually.  Details on how to do that will vary per gateway and are not described here.  
+One of the benefits of the VNET Integration feature is that if your VNET is connected to your on premise network with a Site to Site VPN then your apps can have access to your on premise resources from your app.  For this to work though you may need to update your on premise VPN gateway with the routes for your Point to Site IP range.  When the Site to Site VPN is first set up then the scripts used to configure it should set up routes including your Point to Site VPN.  If you add the Point to Site VPN after your create your Site to Site VPN then you will need to update the routes manually.  Details on how to do that will vary per gateway and are not described here. 
+An example of such setup is presented in the following diagram:
+
+![][P2SReturnRoute]
 
 >[AZURE.NOTE] While the VNET Integration feature will work with a Site to Site VPN to access on premise resources it currently will not work with an ExpressRoute VPN to do the same.  This is true when integrating with either a Classic or Resource Manager VNET.  If you need to access resources through an ExpressRoute VPN then you can use an ASE which can run in your VNET. 
 
@@ -291,6 +294,7 @@ Beyond the functional differences there are also pricing differences.  The App S
 [6]: ./media/web-sites-integrate-with-vnet/vnetint-aspmanage.png
 [7]: ./media/web-sites-integrate-with-vnet/vnetint-aspmanagedetail.png
 [8]: ./media/web-sites-integrate-with-vnet/vnetint-vnetp2s.png
+[P2SReturnRoute]: ./media/web-sites-integrate-with-vnet/vnetint-p2sroute.png
 
 <!--Links-->
 [VNETOverview]: http://azure.microsoft.com/documentation/articles/virtual-networks-overview/ 
